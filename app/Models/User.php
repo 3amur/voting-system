@@ -51,7 +51,7 @@ class User extends Authenticatable implements JWTSubject
         return $this->hasMany(Vote::class, 'user_id');
     }
     
-    public function votesReceived(){
+    public function hasVoted(){
         return $this->hasMany(Vote::class, 'voted_from_id');
     }
 
