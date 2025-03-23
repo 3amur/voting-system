@@ -41,4 +41,5 @@ Follow these steps to set up the project on your local machine.
 - php artisan migrate --seed
 
 7️⃣ Run the Application
+- npm run dev or build
 - php artisan ser or serve 😁
