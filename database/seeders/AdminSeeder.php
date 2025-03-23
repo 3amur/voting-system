@@ -21,7 +21,7 @@ class AdminSeeder extends Seeder
         DB::table('users')->insert([
             'name' => 'Orevan',
             'email' => $email,
-            'photo' => 'photo.png',
+            'photo' => 'orevan_consulting_logo.jpeg',
             'password' => Hash::make($password),
             'type' => 'admin',
             'status' => 'approved',
