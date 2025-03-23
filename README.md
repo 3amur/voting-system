@@ -32,7 +32,7 @@ Follow these steps to set up the project on your local machine.
 
 4️⃣ Add The Admin Credentials (Email & Password)
 - ADMIN_EMAIL="Your Email"
-- ADMIN_Password ="Your Password"
+- ADMIN_PASSWORD ="Your Password"
 
 5️ Create JWT Secret Key
 - php artisan jwt:secret
