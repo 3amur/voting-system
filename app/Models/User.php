@@ -22,6 +22,7 @@ class User extends Authenticatable implements JWTSubject
         'email',
         'photo',
         'password',
+        'status',
     ];
 
     /**
@@ -47,12 +48,12 @@ class User extends Authenticatable implements JWTSubject
         ];
     }
     
-    public function votes(){
+    public function hasVotes(){
         return $this->hasMany(Vote::class, 'user_id');
     }
     
-    public function hasVoted(){
-        return $this->hasMany(Vote::class, 'voted_from_id');
+    public function makeVote(){
+        return $this->belongsTo(Vote::class, 'voted_from_id');
     }
 
     /**

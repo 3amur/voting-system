@@ -11,7 +11,6 @@ use Illuminate\Support\Facades\Validator;
 class VoteController extends Controller
 {
     public function vote(Request $request){
-        // dd($request->all());
         $userVotedBefore = Vote::where('voted_from_id', $request->voted_from_id)->where('user_id', $request->user_id)->first();
         if($userVotedBefore){
             return back()->with('error', 'Sorry, You Are Voted For That User Before .');
@@ -40,7 +39,7 @@ class VoteController extends Controller
             return back()->with('error', $validator->errors()->first());
         }
 
-        $newVote = Vote::create($request->all());
+        Vote::create($request->all());
         return back()->with('success', "Your Vote Added Successfully .");
     }
 }
